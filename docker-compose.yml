@@ -1,8 +1,7 @@
-# PostgreSQL development database
 services:
   postgresql-dev:
     container_name: postgresql-dev
-    image: postgres:latest
+    image: postgres:16
     restart: unless-stopped
     ports:
       - "15432:5432/tcp"
@@ -12,14 +11,17 @@ services:
       - POSTGRES_PASSWORD=postgres
     volumes:
       - ./postgresql_volume:/var/lib/postgresql/data:rw,Z
-    stdin_open: true
-    tty: true
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d db-dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
     networks:
       - postgres
 
   postgresql-test-e2e:
     container_name: postgresql-test-e2e
-    image: postgres:latest
+    image: postgres:16
     restart: unless-stopped
     ports:
       - "25432:5432/tcp"
@@ -27,8 +29,25 @@ services:
       - POSTGRES_DB=db-test-e2e
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-    stdin_open: true
-    tty: true
+    networks:
+      - postgres
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nestjs-app
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - DATABASE_HOST=postgresql-dev
+      - DATABASE_PORT=5432
+    depends_on:
+      postgresql-dev:
+        condition: service_healthy
     networks:
       - postgres
 
@@ -38,3 +57,4 @@ volumes:
 networks:
   postgres:
     driver: bridge
+
