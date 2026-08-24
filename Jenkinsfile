@@ -32,6 +32,13 @@ pipeline {
                 sh 'docker compose build app'
             }
         }
+        stage('Prepare Environment') {
+            steps {
+                withCredentials([file(credentialsId: 'app-env-file', variable: 'ENV_FILE')]) {
+                    sh 'cp "$ENV_FILE" .env'
+                }
+            }
+        }
 
         stage('Deploy') {
             steps {
