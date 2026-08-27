@@ -715,3 +715,4 @@ If you want to deep dive and to understand in detail how this tool works, please
 <a href="https://github.com/andrea-acampora/nestjs-ddd-devops/contributors">
   <img src="https://contributors-img.web.app/image?repo=andrea-acampora/nestjs-ddd-devops" alt="Contributors" />
 </a>
+# test poll scm trigger
