@@ -65,7 +65,7 @@ pipeline {
                 '''
             }
         }
-
+     }
     post {
         success {
             echo 'CI/CD Pipeline completed successfully!'
