@@ -1,3 +1,18 @@
+## [1.0.1](https://github.com/MohamedAboelmagd06/devops-project1/compare/1.0.0...1.0.1) (2026-08-30)
+
+### Documentation
+
+* test poll scm auto trigger ([88fa3af](https://github.com/MohamedAboelmagd06/devops-project1/commit/88fa3af551fbf5a6a3128c8109df4546c3d09eca))
+
+### Build and continuous integration
+
+* load .env from Jenkins secret credential before deploy ([77b23a0](https://github.com/MohamedAboelmagd06/devops-project1/commit/77b23a0c07bf07c0e5db249d7d20e2476954ab70))
+
+### General maintenance
+
+* add fixed image name for ec2 deployment ([e8f9ca5](https://github.com/MohamedAboelmagd06/devops-project1/commit/e8f9ca5ffca69c2a2588d5ea731ffca4c72976c8))
+* merge origin/main into main ([99a098f](https://github.com/MohamedAboelmagd06/devops-project1/commit/99a098f9027c9047c0d20616df7ea579b19bba98))
+
 ## 1.0.0 (2026-08-21)
 
 ### ⚠ BREAKING CHANGES
