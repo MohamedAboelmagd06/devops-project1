@@ -1,3 +1,17 @@
+## [1.0.2](https://github.com/MohamedAboelmagd06/devops-project1/compare/1.0.1...1.0.2) (2026-08-30)
+
+### Bug Fixes
+
+* restore missing closing brace in jenkinsfile ([c049fd3](https://github.com/MohamedAboelmagd06/devops-project1/commit/c049fd3615bf9eaf8eff97dec3b3fdd23e9e6fa4))
+
+### Build and continuous integration
+
+* deploy built image to ec2 over ssh instead of local compose ([5ce37fa](https://github.com/MohamedAboelmagd06/devops-project1/commit/5ce37fac4af13784cd30059fac89d444f5eef786))
+
+### General maintenance
+
+* merge origin/main into main ([f59e335](https://github.com/MohamedAboelmagd06/devops-project1/commit/f59e33552232717d5ca340645bd1d81e2724c036))
+
 ## [1.0.1](https://github.com/MohamedAboelmagd06/devops-project1/compare/1.0.0...1.0.1) (2026-08-30)
 
 ### Documentation
