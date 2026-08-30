@@ -40,9 +40,20 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+                        stage('Package Image') {
             steps {
-                sh 'docker compose up -d'
+                sh 'docker save nestjs-ddd-devops-app:latest -o app-image.tar'
+            }
+        }
+
+        stage('Deploy to EC2') {
+            steps {
+                withCredentials([sshUserPrivateKey(credentialsId: 'ec2-ssh-key', keyFileVariable: 'SSH_KEY', usernameVariable: 'SSH_USER')]) {
+                    sh '''
+                        scp -o StrictHostKeyChecking=no -i $SSH_KEY app-image.tar docker-compose.yml .env $SSH_USER@34.207.60.248:/home/ubuntu/devops-project1/
+                        ssh -o StrictHostKeyChecking=no -i $SSH_KEY $SSH_USER@34.207.60.248 "cd /home/ubuntu/devops-project1 && docker load -i app-image.tar && docker compose up -d && rm app-image.tar"
+                    '''
+                }
             }
         }
 
@@ -50,11 +61,10 @@ pipeline {
             steps {
                 sh '''
                     sleep 10
-                    curl -f http://localhost:3000/api/v1/health
+                    curl -f http://34.207.60.248:3000/api/v1/health
                 '''
             }
         }
-    }
 
     post {
         success {
