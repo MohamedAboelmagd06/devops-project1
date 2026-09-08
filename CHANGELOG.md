@@ -1,3 +1,13 @@
+## [1.1.0](https://github.com/MohamedAboelmagd06/devops-project1/compare/1.0.3...1.1.0) (2026-09-08)
+
+### Features
+
+* add prometheus metrics endpoint ([8df5381](https://github.com/MohamedAboelmagd06/devops-project1/commit/8df5381db0c90b05805aba0b13bc3aafe2344e15))
+
+### General maintenance
+
+* merge origin/main into main ([a14dd8f](https://github.com/MohamedAboelmagd06/devops-project1/commit/a14dd8f360967efca3265fca602e8cf7092f0b52))
+
 ## [1.0.3](https://github.com/MohamedAboelmagd06/devops-project1/compare/1.0.2...1.0.3) (2026-08-30)
 
 ### Bug Fixes
