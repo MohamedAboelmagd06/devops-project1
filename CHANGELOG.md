@@ -1,3 +1,13 @@
+## [1.0.3](https://github.com/MohamedAboelmagd06/devops-project1/compare/1.0.2...1.0.3) (2026-08-30)
+
+### Bug Fixes
+
+* correct yaml indentation for image key in compose ([3b9cfc2](https://github.com/MohamedAboelmagd06/devops-project1/commit/3b9cfc28933b1d00d98ef7100b98be5e409518ee))
+
+### General maintenance
+
+* merge origin/main into main ([48d640c](https://github.com/MohamedAboelmagd06/devops-project1/commit/48d640cf19db9c2c38ff0828602d3cbddf80ba8e))
+
 ## [1.0.2](https://github.com/MohamedAboelmagd06/devops-project1/compare/1.0.1...1.0.2) (2026-08-30)
 
 ### Bug Fixes
