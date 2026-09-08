@@ -9,6 +9,7 @@ import { EventEmitterModule } from '@nestjs/event-emitter';
 import { ScheduleModule } from '@nestjs/schedule';
 import { UserModule } from './modules/user/user.module';
 import { HealthModule } from './modules/health/health.module';
+import { MetricsModule } from './modules/metrics/metrics.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { CqrsModule } from '@nestjs/cqrs';
 import { CommunicationModule } from './modules/communication/communication.module';
@@ -50,6 +51,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
     EventEmitterModule.forRoot(),
     ScheduleModule.forRoot(),
     HealthModule,
+    MetricsModule,
     UserModule,
     AuthModule,
     CommunicationModule,
