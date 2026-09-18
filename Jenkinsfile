@@ -51,7 +51,8 @@ pipeline {
                 withCredentials([sshUserPrivateKey(credentialsId: 'ec2-ssh-key', keyFileVariable: 'SSH_KEY', usernameVariable: 'SSH_USER')]) {
                     sh '''
                         scp -o StrictHostKeyChecking=no -i $SSH_KEY app-image.tar docker-compose.yml .env $SSH_USER@34.207.60.248:/home/ubuntu/devops-project1/
-                        ssh -o StrictHostKeyChecking=no -i $SSH_KEY $SSH_USER@34.207.60.248 "cd /home/ubuntu/devops-project1 && docker load -i app-image.tar && docker compose up -d && rm app-image.tar"
+scp -o StrictHostKeyChecking=no -r -i $SSH_KEY monitoring $SSH_USER@34.207.60.248:/home/ubuntu/devops-project1/
+ssh -o StrictHostKeyChecking=no -i $SSH_KEY $SSH_USER@34.207.60.248 "cd /home/ubuntu/devops-project1 && docker load -i app-image.tar && docker compose up -d --force-recreate && rm app-image.tar"
                     '''
                 }
             }
