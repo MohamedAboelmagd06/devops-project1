@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/MohamedAboelmagd06/devops-project1/compare/1.1.0...1.2.0) (2026-09-18)
+
+### Features
+
+* add prometheus and grafana monitoring ([f7d34cf](https://github.com/MohamedAboelmagd06/devops-project1/commit/f7d34cf336379382e376d155a11a726f213e9cab))
+
 ## [1.1.0](https://github.com/MohamedAboelmagd06/devops-project1/compare/1.0.3...1.1.0) (2026-09-08)
 
 ### Features
