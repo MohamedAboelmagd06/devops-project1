@@ -50,9 +50,9 @@ pipeline {
             steps {
                 withCredentials([sshUserPrivateKey(credentialsId: 'ec2-ssh-key', keyFileVariable: 'SSH_KEY', usernameVariable: 'SSH_USER')]) {
                     sh '''
-                        scp -o StrictHostKeyChecking=no -i $SSH_KEY app-image.tar docker-compose.yml .env $SSH_USER@34.207.60.248:/home/ubuntu/devops-project1/
-scp -o StrictHostKeyChecking=no -r -i $SSH_KEY monitoring $SSH_USER@34.207.60.248:/home/ubuntu/devops-project1/
-ssh -o StrictHostKeyChecking=no -i $SSH_KEY $SSH_USER@34.207.60.248 "cd /home/ubuntu/devops-project1 && docker load -i app-image.tar && docker compose up -d --force-recreate && rm app-image.tar"
+                        scp -o StrictHostKeyChecking=no -i $SSH_KEY app-image.tar docker-compose.yml .env $SSH_USER@54.208.101.5:/home/ubuntu/devops-project1/
+scp -o StrictHostKeyChecking=no -r -i $SSH_KEY monitoring $SSH_USER@54.208.101.5:/home/ubuntu/devops-project1/
+ssh -o StrictHostKeyChecking=no -i $SSH_KEY $SSH_USER@54.208.101.5 "cd /home/ubuntu/devops-project1 && docker load -i app-image.tar && docker compose up -d --force-recreate && rm app-image.tar"
                     '''
                 }
             }
@@ -62,7 +62,7 @@ ssh -o StrictHostKeyChecking=no -i $SSH_KEY $SSH_USER@34.207.60.248 "cd /home/ub
             steps {
                 sh '''
                     sleep 10
-                    curl -f http://34.207.60.248:3000/api/v1/health
+                    curl -f http://54.208.101.5:3000/api/v1/health
                 '''
             }
         }
