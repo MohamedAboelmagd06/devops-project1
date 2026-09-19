@@ -1,3 +1,14 @@
+## [1.3.1](https://github.com/MohamedAboelmagd06/devops-project1/compare/1.3.0...1.3.1) (2026-09-19)
+
+### Bug Fixes
+
+* disable structured metadata in loki config for schema v11 compatibility ([6a0b3d3](https://github.com/MohamedAboelmagd06/devops-project1/commit/6a0b3d3575faa404ed5abeaf2363e3276097c9a6))
+
+### General maintenance
+
+* merge origin/main into main ([c469dd1](https://github.com/MohamedAboelmagd06/devops-project1/commit/c469dd1a29ccb9753403ca4a6b14df71f32235e5))
+* update ec2 deployment ip to elastic ip ([0bb22d2](https://github.com/MohamedAboelmagd06/devops-project1/commit/0bb22d263259d3c499d3a880cceb5d83c853cadb))
+
 ## [1.3.0](https://github.com/MohamedAboelmagd06/devops-project1/compare/1.2.0...1.3.0) (2026-09-19)
 
 ### Features
