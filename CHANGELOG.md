@@ -1,3 +1,13 @@
+## [1.3.0](https://github.com/MohamedAboelmagd06/devops-project1/compare/1.2.0...1.3.0) (2026-09-19)
+
+### Features
+
+* add prometheus, grafana, loki and promtail for monitoring and logging ([6b8d873](https://github.com/MohamedAboelmagd06/devops-project1/commit/6b8d873a8c4b62c6dd41ea6c19a810bf40154bda))
+
+### General maintenance
+
+* merge origin/main into main ([33d7b75](https://github.com/MohamedAboelmagd06/devops-project1/commit/33d7b753bb874843ce667c0bd6bbb01af22e59ec))
+
 ## [1.2.0](https://github.com/MohamedAboelmagd06/devops-project1/compare/1.1.0...1.2.0) (2026-09-18)
 
 ### Features
