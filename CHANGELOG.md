@@ -1,3 +1,13 @@
+## [1.4.0](https://github.com/MohamedAboelmagd06/devops-project1/compare/1.3.1...1.4.0) (2026-09-20)
+
+### Features
+
+* add automated backup/restore scripts and recovery test report ([4da8fd8](https://github.com/MohamedAboelmagd06/devops-project1/commit/4da8fd8a85570fbf11cd6379dbec0a62be199cb7))
+
+### General maintenance
+
+* merge origin/main into main ([5a95d4b](https://github.com/MohamedAboelmagd06/devops-project1/commit/5a95d4b05cfcb95320e61c1342d41ff1cd44a8d6))
+
 ## [1.3.1](https://github.com/MohamedAboelmagd06/devops-project1/compare/1.3.0...1.3.1) (2026-09-19)
 
 ### Bug Fixes
